@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-black">
+<main class="bg-red">
+    <div class="container bg-white">
+        <div class="color-section bg-white text-black flex-fill d-flex justify-content-center align-items-center">
+            <h1 class="pokemon-title">Pokedex Web</h1>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6 offset-md-3">
+                <br>
+                <div id="error-message" class="text-danger"></div>
+                <div id="pokemon2" class="text-dark"></div>
+                <div id="spinner" class="spinner-border text-primary" role="status" style="display: none;">
+                    <span class="sr-only">Cargando...</span>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="search" class="form-control" placeholder="Buscar Pokémon">
+                    <div class="input-group-append">
+                        <button id="search-button" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-3 text-center">
+                <button id="random-button" class="btn btn-info mr-2">Aleatorio</button>
+                <button id="clear-button" class="btn btn-danger">Limpiar</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6 offset-md-3 text-center">
+                <button id="search-id-button" class="btn btn-primary mr-2">Buscar Pkmn por ID</button>
+                <button id="search-name-button" class="btn btn-primary mr-2">Buscar Pkmn por Nombre</button>
+                <button id="search-type-button" class="btn btn-primary mr-2">Buscar por Tipo</button>
+                <button id="search-ability-button" class="btn btn-primary">Buscar por Habilidad</button>
+                <button id="search-nature-button" class="btn btn-primary ml-2">Buscar por Naturaleza</button> <!-- Botón para buscar por naturaleza -->
+                <button id="search-pokeathlon-button" class="btn btn-primary ml-2">Buscar por Estadísticas de Pokéathlon</button> <!-- Botón para buscar por estadísticas de Pokéathlon -->
+            </div>
+        </div><br><br>
+    </div><br>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-6 offset-md-3">
+                <div class="form-group">
+                    <label for="endpoint-select" class="text-light">Seleccionar tipo de datos:</label>
+                    <select id="endpoint-select" class="form-control">
+                        <option value="pokemon">Pokémon</option>
+                        <option value="ability">Habilidad</option>
+                        <option value="type">Tipo</option>
+                        <option value="nature">Naturaleza</option> <!-- Agregado para buscar por naturaleza -->
+                        <option value="pokeathlon-stat">Estadísticas de Pokéathlon</option> <!-- Agregado para buscar por estadísticas de Pokéathlon -->
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="pokemon" class="text-center mb-4"></div>
+        <div id="results2" class="row"></div>
+        <div id="results" class="row"></div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <button id="prev-button" class="btn btn-secondary" disabled>Anterior</button>
+                <button id="next-button" class="btn btn-secondary">Siguiente</button>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
